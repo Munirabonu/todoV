@@ -1,11 +1,9 @@
 <script lang="ts">
 import VButton from '../src/generic/VButton.vue'
-import Filter from './component/Filter.vue'
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   components: {
-    Filter,
     VButton
   },
 
@@ -71,7 +69,6 @@ export default defineComponent({
           <VButton @click="saveItem(list)" color="info">save</VButton>
         </div>
         <div v-else class="item">
-
           <p>{{ index + 1 }} {{ list.text }}</p>
           <VButton @click="deleteItem(list.id)" color="danger" bold>x</VButton>
           <VButton @click="editItem(list)" color="warning">edit</VButton>
@@ -81,6 +78,7 @@ export default defineComponent({
 
   </div>
 </template>
+
 <style scoped>
 .bg-blue {
   width: 100%;
